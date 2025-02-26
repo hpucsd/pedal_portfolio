@@ -3,11 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hansel Puthenparambil: Personal site and Portfolio</title>
+    <title>Pedal Portfolio</title>
+    <script src="map.js" type="module"></script>
+
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="map.css">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
 </head>
 <body>
-    <h1>Hansel Puthenparambil</h1>
+    <h1>Pedal Portfolio</h1>
 
-    <p>I am a second year Data Science major from University of California, San Diego.</p>
+    <p>This will create a interactive, immersive geospatial data visualization 
+        about the bike traffic in the Boston area throughout the day
+    </p>
+
+    <div id="map">
+        <svg></svg>
+    </div>
+
+    <div class="legend">
+        <div class="legend-item" style="--departure-ratio: 1">
+          <span class="legend-color"></span> More departures
+        </div>
+        <div class="legend-item" style="--departure-ratio: 0.5">
+          <span class="legend-color"></span> Balanced
+        </div>
+        <div class="legend-item" style="--departure-ratio: 0">
+          <span class="legend-color"></span> More arrivals
+        </div>
+      </div>
+    
+    <div class="time-filter">
+        <label>
+            Filter by time:
+            <input type="range" id="time-slider" min="-1" max="1440" value="-1">
+            <time id="selected-time"></time>
+            <em id="any-time">(any time)</em>
+        </label>
+    </div>
+
+    <!-- Load D3.js from CDN
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <script src="map.js"></script> -->
 </body>
 </html>

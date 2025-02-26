@@ -1,0 +1,49 @@
+body {
+    font: 100%/1.5 system-ui, sans-serif;
+    display: flex;
+    flex-flow: column;
+    max-width: 80em;
+    min-height: 100vh;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 1em;
+  }
+
+label {
+  margin-left: auto;
+  }
+
+time, em {
+  display: block;
+  }
+
+em {
+  color: gray;
+  font-style: italic;
+  }
+
+  .time-filter {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.8); /* Light background */
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    margin: 10px auto; /* Centers it */
+  }
+  
+  .time-filter label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  #any-time {
+    display: block;
+    font-style: italic;
+    color: #666;
+  }
+  
